@@ -51,21 +51,26 @@ html, body, .window{
 <script src="../zepto/touch.js"></script>
 <script src="../zepto/fx.js"></script>
 <script>
-    $('#page').find('.page').swipeUp(function () {
+document.addEventListener('touchmove', function (event) {
+    event.preventDefault();
+}, false);
+    $('#page').find('.page').swipeUp(function (e) {
         alert(0)
         if($(this).next('.page').length == 0){
             return;
         }
             alert(00)
         $(this).next('.page').animate({top: '0'}, 500, 'ease-out');
+        e.preventDefault();
     });
-    $('#page').find('.page').swipeDown(function () {
+    $('#page').find('.page').swipeDown(function (e) {
         alert(1)
         if($(this).prev('.page').length == 0){
             return;
         }
             alert(11)
         $(this).animate({top: '100%'}, 1000, 'ease-out');
+        e.preventDefault();
     });
 </script>
 </body>
