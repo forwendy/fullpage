@@ -1,5 +1,2 @@
-# Fullpage
-
-## 设备
-- PC端
-- 移动端
+# Test-zepto
+移动端 zepto.js demo
